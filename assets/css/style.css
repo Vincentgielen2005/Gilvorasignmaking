@@ -370,6 +370,11 @@ section{ position:relative; }
     repeating-linear-gradient(115deg, transparent 0 40px, rgba(212,175,55,.12) 40px 42px),
     linear-gradient(135deg, #1a1a1a, #0a0a0a);
 }
+.about-visual img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+}
 .about-visual .g-mark{
   position:absolute; inset:0;
   display:flex; align-items:center; justify-content:center;
@@ -428,7 +433,7 @@ section{ position:relative; }
 .service-card::before{
   content:"";
   position:absolute; inset:0; z-index:-2;
-  background: linear-gradient(160deg, #232323, #0a0a0a);
+  background: linear-gradient(180deg, rgba(10,10,10,.35), rgba(5,5,5,.9));
 }
 .service-card::after{
   content:"";
@@ -438,6 +443,14 @@ section{ position:relative; }
   transition: opacity .4s;
 }
 .service-card:hover::after{ opacity:1; }
+.service-card .bg-photo{
+  position:absolute; inset:0; z-index:-3;
+  width:100%; height:100%;
+  object-fit:cover;
+  filter: brightness(.7);
+  transition: transform .6s var(--ease), filter .4s;
+}
+.service-card:hover .bg-photo{ transform: scale(1.07); filter: brightness(.55); }
 .service-card .num{
   position:absolute; top:22px; right:26px;
   font-family:'Montserrat',sans-serif;
@@ -584,10 +597,15 @@ section{ position:relative; }
   aspect-ratio: 4/3;
   background: linear-gradient(150deg,#1c1c1c,#050505);
 }
+.visual-panel img{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+}
 .visual-panel .stripes{
   position:absolute; inset:0;
-  background: repeating-linear-gradient(115deg, transparent 0 30px, rgba(212,175,55,.5) 30px 36px, transparent 36px 60px);
-  opacity:.5;
+  background: repeating-linear-gradient(115deg, transparent 0 30px, rgba(212,175,55,.35) 30px 36px, transparent 36px 60px);
+  opacity:.45;
   animation: shimmer 8s ease-in-out infinite;
 }
 .visual-panel .icon-wrap{
