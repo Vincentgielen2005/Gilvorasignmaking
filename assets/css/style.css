@@ -118,7 +118,7 @@ section{ position:relative; }
   height: var(--header-h);
   display:flex;
   align-items:center;
-  background: rgba(17,17,17,0);
+  background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,0));
   transition: background .4s var(--ease), box-shadow .4s var(--ease), height .3s var(--ease);
 }
 .site-header.solid{
